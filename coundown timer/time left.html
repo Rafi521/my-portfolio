@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 100px 0; /* Adjusted padding */
+      }
+
+      .countdown-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .countdown-title {
+        font-size: 36px; /* Increased font size */
+        margin-bottom: 20px;
+      }
+
+      .countdown {
+        font-size: 28px; /* Increased font size */
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card countdown-card">
+            <div class="card-body">
+              <h3 class="countdown-title">Countdown to Graduation:</h3>
+              <p class="countdown" id="countdown"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var countDownDate = new Date();
+      countDownDate.setDate(countDownDate.getDate() + 70); // Adding 70 days to current date
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
