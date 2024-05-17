@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,28 +51,34 @@
     </div>
 
     <script>
-      var countDownDate = new Date();
-      countDownDate.setDate(countDownDate.getDate() + 70); // Adding 70 days to current date
+      // Setting the countdown target date
+      var countDownDate = new Date('July 25, 2024 00:00:00').getTime();
 
-      var x = setInterval(function () {
+      // Function to update the countdown
+      function updateCountdown() {
         var now = new Date().getTime();
         var distance = countDownDate - now;
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         document.getElementById("countdown").innerHTML =
           days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
+        // If the countdown is over, display "EXPIRED"
         if (distance < 0) {
           clearInterval(x);
           document.getElementById("countdown").innerHTML = "EXPIRED";
         }
-      }, 1000);
+      }
+
+      // Initial call to display the countdown immediately
+      updateCountdown();
+
+      // Update the countdown every second
+      var x = setInterval(updateCountdown, 1000);
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
