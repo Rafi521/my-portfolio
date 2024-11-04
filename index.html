@@ -1,208 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #282c34;
-        color: #ffffff;
-        font-family: "Arial", sans-serif;
-        transition: background-color 0.5s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Istehad Ahmed Rafi - Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #282c34;
+      color: #ffffff;
+      font-family: "Arial", sans-serif;
+      transition: background-color 0.5s ease;
+    }
 
-      .header {
-        text-align: center;
-        padding: 40px;
-        background-color: #20232a;
-        border-bottom: 2px solid #61dafb;
-      }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #20232a;
+      border-bottom: 2px solid #61dafb;
+    }
 
-      .header h1 {
-        font-size: 3em;
-        margin: 0;
-        color: #61dafb;
-        letter-spacing: 2px;
-      }
+    .header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #61dafb;
+      letter-spacing: 2px;
+    }
 
-      .main {
-        padding: 40px;
-      }
+    /* Main Section Styling */
+    .main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
 
-      .profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
-        text-align: center;
-      }
+    /* Profile Section */
+    .profile {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-      .profile img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 4px solid #61dafb;
-        margin-right: 40px;
-        transition: transform 0.3s ease;
-      }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #61dafb;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
 
-      .profile img:hover {
-        transform: scale(1.1);
-      }
+    .profile img:hover {
+      transform: scale(1.1);
+    }
 
-      .profile h2 {
-        font-size: 2.5em;
-        margin: 0;
-        letter-spacing: 1px;
-      }
+    .profile h2 {
+      font-size: 1.8em;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
 
-      .about {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 40px;
-      }
+    /* About Section */
+    .about, .projects, .contact {
+      margin-bottom: 40px;
+      text-align: center;
+    }
 
-      .about-desc {
-        width: 100%;
-        padding: 20px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-      }
+    .about h3, .projects h3, .contact h3 {
+      font-size: 1.8em;
+      margin-top: 0;
+      color: #61dafb;
+      margin-bottom: 10px;
+    }
 
-      .about-desc h3 {
-        font-size: 2em;
-        margin-top: 0;
-        color: #ffffff;
-        letter-spacing: 1px;
-      }
+    .about p {
+      line-height: 1.6;
+      margin: 20px;
+    }
 
-      .about-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+    /* Project List */
+    .project-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
 
-      .about-list li {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-        color: #ffffff;
-      }
+    .project-item {
+      background: #20232a;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
 
-      .social-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-      }
+    .project-item:hover {
+      background-color: #333;
+    }
 
-      .social-links a {
-        display: inline-block;
-        margin: 0 20px;
-        color: #61dafb;
-        font-size: 2em;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-      .social-links a:hover {
-        color: #ffffff;
-      }
+    .social-links a {
+      color: #61dafb;
+      font-size: 2em;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-      .footer {
-        text-align: center;
-        padding: 40px;
-        background-color: #20232a;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-      }
+    .social-links a:hover {
+      color: #ffffff;
+    }
 
-      .footer a {
-        display: inline-block;
-        margin: 0 10px;
-        color: #61dafb;
-        font-size: 1.2em;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #20232a;
+      color: #61dafb;
+    }
 
-      .footer a:hover {
-        color: #ffffff;
-      }
+    .footer a {
+      color: #61dafb;
+      font-size: 1em;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
 
-      @media only screen and (max-width: 1068px) {
-        .profile {
-          flex-direction: column;
-        }
+    .footer a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
 
-        .profile img {
-          margin-right: 0;
-          margin-bottom: 20px;
-        }
+<body>
 
-        .about-desc {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="rotate-content">
-      <div class="header">
-        <h1>MD Istehad Ahmed Rafi</h1>
-      </div>
+  <!-- Header -->
+  <div class="header">
+    <h1>MD Istehad Ahmed Rafi</h1>
+  </div>
 
-      <div class="main">
-        <div class="profile">
-          <img src="photo/myPhoto.jpg" alt="Profile Picture" />
-          <h2>Web Developer | Passionate about ML and AI</h2>
-        </div>
+  <!-- Main Section -->
+  <div class="main">
 
-        <div class="about">
-          <div class="about-desc">
-            <h3>Skills</h3>
-            <ul class="about-list">
-              <li>Node Js,MongoDB</li>
-              <li>ASP.NET MVC</li>
-              <li>Object-Oriented Programming (OOP)</li>
-            </ul>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/Rafi521" target="_blank">&#x1F4BB;</a>
-            <a
-              href="https://www.linkedin.com/in/md-istehad-ahmed-rafi/"
-              target="_blank"
-              >&#x1F517;</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <a href="skills/skills.html" target="_blank">Skills</a>
-
-        <a href="resume/resume.html" target="_blank">Resume</a>
-        <a href="contact/contact.html" target="_blank">Contact Info</a>
-        <a href="https://github.com/Rafi521" target="_blank">GitHub</a>
-        <a
-          href="https://www.linkedin.com/in/md-istehad-ahmed-rafi/"
-          target="_blank"
-          >LinkedIn</a
-        >
-        <a href="university project/university project.html" target="_blank"
-          >University Projects</a
-        >
-        <a href="coundown timer/time left.html" target="_blank">Time Left</a>
-      </div>
+    <!-- Profile Section -->
+    <div class="profile">
+      <img src="photo/myPhoto.jpg" alt="Profile Picture" />
+      <h2>Web Developer | Passionate about ML and AI</h2>
     </div>
-  </body>
+
+    <!-- About Section -->
+    <section class="about">
+      <h3>About Me</h3>
+      <p>I'm a full-stack web developer with a keen interest in backend development, machine learning, and AI. Skilled in Node.js, ASP.NET MVC, and Object-Oriented Programming.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="about">
+      <h3>Skills</h3>
+      <ul class="about-list">
+        <li>Node.js, MongoDB</li>
+        <li>ASP.NET MVC</li>
+        <li>Object-Oriented Programming (OOP)</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+      <h3>Projects</h3>
+      <ul class="project-list">
+        <li class="project-item">
+          <strong>Project One</strong><br>
+          Description: A full-stack app that uses REST APIs to dynamically load content.
+        </li>
+        <li class="project-item">
+          <strong>Project Two</strong><br>
+          Description: A React and Node.js-based task management application with real-time updates.
+        </li>
+        <li class="project-item">
+          <strong>Project Three</strong><br>
+          Description: Responsive website for a local business, featuring interactive elements.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Social Links Section -->
+    <div class="social-links">
+      <a href="https://github.com/Rafi521" target="_blank">&#x1F4BB;</a>
+      <a href="https://www.linkedin.com/in/md-istehad-ahmed-rafi/" target="_blank">&#x1F517;</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="skills/skills.html" target="_blank">Skills</a>
+    <a href="resume/resume.html" target="_blank">Resume</a>
+    <a href="contact/contact.html" target="_blank">Contact</a>
+    <a href="https://github.com/Rafi521" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/md-istehad-ahmed-rafi/" target="_blank">LinkedIn</a>
+    <a href="university project/university project.html" target="_blank">University Projects</a>
+    <a href="coundown timer/time left.html" target="_blank">Time Left</a>
+  </div>
+
+</body>
 </html>
