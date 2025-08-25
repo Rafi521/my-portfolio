@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="professional-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>💻</text></svg>\">
 </head>
 <body>
     <!-- Navigation -->
@@ -22,6 +22,9 @@
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="#skills" class="nav-link">Skills</a>
@@ -70,34 +73,84 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My journey, passion, and what drives me</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A Developer with a Passion for Innovation</h3>
+                    <p>
+                        Hello! I\"m MD Istehad Ahmed Rafi, a web developer based in Dhaka, Bangladesh. My journey into programming began with a deep fascination for how technology can solve real-world problems, leading me to pursue a Bachelor of Science in Computer Science and Engineering from Ahsanullah University of Science and Technology (Dec 2020 - Dec 2024).
+                    </p>
+                    <p>
+                        I thrive on challenges and am particularly excited by the intersection of web technologies with Machine Learning and Artificial Intelligence. My academic background and practical experience have equipped me with strong skills in Node.js, MongoDB, ASP.NET MVC, and Object-Oriented Programming. I believe in writing clean, maintainable code and am always eager to learn new tools and methodologies to deliver high-quality products.
+                    </p>
+                    <p>
+                        This portfolio is a reflection of my dedication and the skills I\"ve honed. Feel free to explore my projects and get in touch if you have an exciting opportunity or just want to connect!
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <img src="photo/myPhoto.jpg" alt="MD Istehad Ahmed Rafi" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Skills</h2>
-                <p class="section-subtitle">Technologies and expertise I work with</p>
+                <p class="section-subtitle">Technologies and expertise I work with to bring ideas to life</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Node.js, MongoDB</h3>
-                    <p>Full-stack JavaScript development with Node.js runtime and MongoDB database for scalable web applications.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h3>ASP.NET MVC</h3>
-                    <p>Enterprise web application development using Microsoft's ASP.NET MVC framework with C# and .NET ecosystem.</p>
+                    <h3>Programming Languages</h3>
+                    <p>Proficient in C++, JAVA, and C#, applying strong foundational knowledge to develop robust and efficient solutions across various domains.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-code"></i>
                     </div>
+                    <h3>Front End Development</h3>
+                    <p>Skilled in creating dynamic and responsive user interfaces using HTML, CSS, and JavaScript, ensuring engaging and intuitive user experiences.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Back End Development</h3>
+                    <p>Experienced in building scalable server-side applications with Node.js, Express, and ASP.NET, focusing on robust API design and efficient data handling.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>Adept at managing and querying databases using SQL Server and MongoDB, ensuring data integrity and optimizing performance for various applications.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Deep Learning & AI</h3>
+                    <p>Developed a deep learning project for Twitter emotion extraction and classification using Bi-LSTM and BERT, showcasing expertise in AI model development and natural language processing.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
                     <h3>Object-Oriented Programming (OOP)</h3>
-                    <p>Strong foundation in OOP principles including encapsulation, inheritance, polymorphism, and abstraction.</p>
+                    <p>Strong foundation in OOP principles, applying concepts like encapsulation, inheritance, polymorphism, and abstraction to write modular, reusable, and maintainable code across various programming languages and projects. This approach underpins my development methodology.</p>
                 </div>
             </div>
         </div>
@@ -113,29 +166,105 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-campground"></i>
                     </div>
-                    <h3>University Projects</h3>
-                    <p>Academic projects showcasing web development skills and modern programming practices.</p>
+                    <h3>CampingBd</h3>
+                    <p>Designed and developed an interactive platform showcasing campgrounds from various locations using Node.js, MongoDB, and Express. Enhanced user engagement with features for adding, editing, and deleting campgrounds.</p>
                     <div class="project-links">
-                        <a href="university project/university project.html" class="project-link">
+                        <a href="https://github.com/Rafi521/CampingBd" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="#" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
-                            View Project
+                            Live Link
                         </a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-icon">
-                        <i class="fab fa-github"></i>
+                        <i class="fas fa-car"></i>
                     </div>
-                    <h3>GitHub Repository</h3>
-                    <p>Explore my complete collection of projects, code samples, and contributions on GitHub.</p>
+                    <h3>RideSavvy</h3>
+                    <p>Implemented an ASP.NET MVC web application that serves as an online platform for convenient vehicle rentals in tourist zones, focusing on a seamless user experience and robust backend.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Rafi521" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/Rafi521/RideSavvy" target="_blank" rel="noopener noreferrer" class="project-link">
                             <i class="fab fa-github"></i>
-                            View GitHub
+                            GitHub
                         </a>
                     </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Deep Learning for Twitter Emotion Extraction and Classification</h3>
+                    <p>Developed a deep learning project for emotion extraction and classification based on customer Twitter posts. The model uses a Bi-LSTM architecture combined with a BERT pre-trained model for better accuracy in understanding context and extracting relevant emotional sentiment.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Rafi521/Twitter-Emotion-Extraction-and-Classification" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3>B.Sc. Thesis: Smart Health</h3>
+                    <p>Worked on “Smart Health: Blockchain-Driven Health Monitoring and Management System” - a Blockchain-based decentralized health management system in the context of Bangladesh on Ethereum, under the supervision of Mr. Md. Khairul Hasan, Associate Professor, AUST.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section id="additional-info" class="additional-info">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Additional Information</h2>
+                <p class="section-subtitle">Competitive programming, event organization, and online profiles</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Competitive Programming Participation</h3>
+                    <ul>
+                        <li>Intra AUST Programming Contest, Spring 2020</li>
+                        <li>CodeClash21: Intra AUST Programming Contest, Fall 2021</li>
+                        <li>CEFALO Codefiesta, 2022</li>
+                        <li>AUST CSE Carnival 1.0, 2022</li>
+                        <li>CodeCombat 1.0, 2023</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Event Organization</h3>
+                    <ul>
+                        <li>Organized: CEFALO Codefiesta, 2022</li>
+                        <li>Organized: AUST CSE Carnival 3.0 - Spring 2023</li>
+                        <li>Member at AUST Programming and Informatics Club</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Programming Profiles</h3>
+                    <ul>
+                        <li><a href="https://codeforces.com/profile/Rafi521" target="_blank" rel="noopener noreferrer">Codeforces Profile</a></li>
+                        <li><a href="https://leetcode.com/Rafi521" target="_blank" rel="noopener noreferrer">LeetCode Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -146,40 +275,24 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+                <p class="section-subtitle">Let\"s connect and discuss opportunities</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <h3>Skills</h3>
-                    <p>Detailed overview of my technical skills and expertise</p>
-                    <a href="skills/skills.html" class="contact-link">View Skills</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Resume</h3>
-                    <p>Professional resume with experience and qualifications</p>
-                    <a href="resume/resume.html" class="contact-link">View Resume</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Contact Info</h3>
-                    <p>Get in touch for collaborations and opportunities</p>
-                    <a href="contact/contact.html" class="contact-link">Contact Me</a>
+                    <h3>Email</h3>
+                    <p>istehadrafi09@gmail.com</p>
+                    <a href="mailto:istehadrafi09@gmail.com" class="contact-link">Send Email</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
-                        <i class="fab fa-github"></i>
+                        <i class="fas fa-phone"></i>
                     </div>
-                    <h3>GitHub</h3>
-                    <p>Explore my code repositories and open source contributions</p>
-                    <a href="https://github.com/Rafi521" target="_blank" rel="noopener noreferrer" class="contact-link">View GitHub</a>
+                    <h3>Phone</h3>
+                    <p>+8801750373032</p>
+                    <a href="tel:+8801750373032" class="contact-link">Call Me</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
@@ -191,11 +304,27 @@
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fab fa-github"></i>
                     </div>
-                    <h3>University Projects</h3>
-                    <p>Academic work and research projects</p>
-                    <a href="university project/university project.html" class="contact-link">View Projects</a>
+                    <h3>GitHub</h3>
+                    <p>Explore my code repositories and open source contributions</p>
+                    <a href="https://github.com/Rafi521" target="_blank" rel="noopener noreferrer" class="contact-link">View GitHub</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Codeforces</h3>
+                    <p>My competitive programming profile</p>
+                    <a href="https://codeforces.com/profile/Rafi521" target="_blank" rel="noopener noreferrer" class="contact-link">View Profile</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>LeetCode</h3>
+                    <p>My LeetCode competitive programming profile</p>
+                    <a href="https://leetcode.com/Rafi521" target="_blank" rel="noopener noreferrer" class="contact-link">View Profile</a>
                 </div>
             </div>
         </div>
