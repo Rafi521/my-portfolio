@@ -219,4 +219,3 @@ const styleSheet = document.createElement("style");
 styleSheet.textContent = loadingStyles;
 document.head.appendChild(styleSheet);
 
-                
